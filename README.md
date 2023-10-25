@@ -22,3 +22,7 @@ Tiap dari tugas Backend kalian harus mempunyai:
   ![Model-Controller Struktur Folder](./assets/folder-structure.png "Model-Controller Struktur Folder")
 - Membuat Postman Collection dan api-doc.md kalian sendiri setelah menyelesaikan API yg dibuat (diexport kemudian disimpan pada folder Assets)
 - Tambahan!!, Menggunakan Package dari npmjs yang belum pernah diajari selama lecture, kalian bisa explore apa yg kalian ingin pakai. 
+
+
+### Cara Pengumpulan Tugas
+Buatlah repository pada akun github masing2, lakukan pengerjaan pada repo yang telah kalian buat, lakukan merge request pada repository vocasia jika telah selesai. Pada deskripsi MR berikan penjelasan mengenai apa yang telah buat dan library baru apa yang telah kalian gunakan.
