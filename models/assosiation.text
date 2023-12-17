@@ -1,0 +1,51 @@
+// File penghubung asosiasi dari models
+"use strict";
+
+/* const AssosiateModels = (models) => {
+        Definisi model yang terlibat
+        const { User , dan sebagainya } = models; 
+
+        List seluruh relasi yang ada / asosiasi lainnya
+       
+    }    
+*/
+
+const assosiateModels = (models) => {
+      const { User , Post , Comment } = models;
+      
+        // Dari User 
+        User.hasMany(models.Post, {
+            as: "post",
+            foreignKey: "userId",
+        });
+
+        User.hasMany(models.Comment, {
+            foreignKey: "userId",
+            as: "comment",
+        });
+
+        // Dari Post 
+        Post.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "userId",
+        });
+
+        Post.hasMany(models.Comment, {
+            foreignKey: "postId",
+            as: "comment",
+        });
+
+        // Dari Comment
+        Comment.belongsTo(models.User, {
+            foreignKey: "userId",
+            as: "user",
+        });
+
+        Comment.belongsTo(models.Post, {
+            foreignKey: "postId",
+            as: "post",
+        });
+
+}
+
+module.exports = assosiateModels;
